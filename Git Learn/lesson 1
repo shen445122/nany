@@ -1,0 +1,22 @@
+提交代码
+  git commit
+
+建立分支
+  git branch 分支1
+
+切换分支
+  git checkout 分支1
+    git commit
+
+合并分支
+  建立分支1
+  切换分支1
+  切换分支master
+  git merge 分支1
+
+rebase分支
+  建立分支1
+  切换分支1
+  切换分支master
+  git checkout 分支1
+  git rebase master
