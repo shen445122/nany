@@ -1,0 +1,18 @@
+切换至hash值
+  git checkout hash1［唯一标识］
+
+切换到父提交
+  git checkout HEAD^
+切换到父父提交
+  git checkout HEAD^^
+切换到N父提交
+  git checkout HEAD~N
+
+强制去到某个分支
+  git branch -f master hash1 [分支名］［位置（相对位置HEAD～，绝对位置hash1）]
+
+撤销操作
+  切换到local分支
+  git reset HEAD~ [上一个分支]
+  切换到远程分支
+  git revert HEAD ［创建一个新的提交］
