@@ -16,3 +16,5 @@
   git reset HEAD~ [上一个分支]
   切换到远程分支
   git revert HEAD ［创建一个新的提交］
+  
+其他
