@@ -1,0 +1,62 @@
+git学习笔记
+
+##本地git
+【配置】
+$ git config --global user.name "Your Name"
+$ git config --global user.email "email@example.com"
+
+【创建目录】
+mkdir xxx
+
+【初始化本地目录】
+git init
+
+【添加文件到仓库】
+git add 文件名/*
+
+【提交文件到仓库】
+git commit -m "wrote a readme file"
+
+>第一步是用git add把文件添加进去，实际上就是把文件修改添加到暂存区；
+>第二步是用git commit提交更改，实际上就是把暂存区的所有内容提交到当前分支。
+
+【查看仓库当前状态】
+git status
+
+【查看修改内容】
+git diff
+
+【查看提交的各个版本】
+git log
+git log --pretty=oneline
+
+【回退到上一版本】
+git reset --hard HEAD^
+	上N个版本，用N个^，100个用：HEAD~100
+
+【撤销回滚】
+git reset --hard 3628164
+	 数字版本为log的版本commit id的前7位，也可以任意位，不过最好不要太少，免得混乱
+
+【查看历史命令】
+git reflog
+
+【查看工作区和版本库里面最新版本的区别】
+git diff HEAD -- 文件名
+
+【撤销文件的修改】
+git checkout -- 文件名
+	 一种是readme.txt自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；
+	 一种是readme.txt已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。
+	 总之，就是让这个文件回到最近一次git commit或git add时的状态。
+	 --很重要，没有--，就变成了“切换到另一个分支”的命令
+
+【把add到暂存区的内容撤销】
+git reset HEAD 文件名
+
+【从版本库中删除文件】
+git rm 文件名
+git commit -m "内容"
+
+【误删本地文件，恢复】
+git checkout -- 文件名
