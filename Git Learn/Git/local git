@@ -60,3 +60,8 @@ git commit -m "内容"
 
 【误删本地文件，恢复】
 git checkout -- 文件名
+
+［git］
+git log --oneline --graph --decorate
+git config --global alias.pl "log --oneline --graph --decorate"
+git log origin/master
